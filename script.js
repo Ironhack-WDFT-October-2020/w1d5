@@ -149,9 +149,66 @@ console.log(evens);
 
 // https://www.codewars.com/kata/54edbc7200b811e956000556
 
+function countSheeps(arr) {
+    const sheep = arr.filter(function (el) {
+        // if (el === true) {
+        //   return true
+        // }
+        return el
+    })
+    return sheep.length
+}
 
+const places = [
+    {
+        title: "Awesome Suite 20' away from la Rambla",
+        price: 200,
+        type: "Private Room",
+        pool: true,
+        garage: false
+    },
+    {
+        title: "Private apartment",
+        price: 190,
+        type: "Entire Place",
+        pool: true,
+        garage: true
+    },
+    {
+        title: "Apartment with awesome views",
+        price: 400,
+        type: "Entire Place",
+        pool: false,
+        garage: false
+    },
+    {
+        title: "Apartment in la Rambla",
+        price: 150,
+        type: "Private Room",
+        pool: false,
+        garage: true
+    },
+    {
+        title: "Comfortable place in Barcelona´s center",
+        price: 390,
+        type: "Entire place",
+        pool: true,
+        garage: true
+    }
+];
 
+const listOfTitles = places.map(function (place) {
+    return place.title;
+})
 
+// filter out all the places with a price above 300
+
+const above300 = places.filter(function (place) {
+    if (place.price > 300) {
+        return true
+    }
+})
+console.log(above300);
 
 
 
