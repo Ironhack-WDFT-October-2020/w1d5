@@ -1,3 +1,4 @@
+
 // map filter sort reduce reverse
 /*
 // map
@@ -138,14 +139,14 @@ const product = {
 // that was set
 
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
-const evens = numbers.filter(function (number) {
-    if (number % 2 === 0 && number > 4) {
-        return true
-    }
-})
-console.log(evens);
+// const evens = numbers.filter(function (number) {
+//     if (number % 2 === 0 && number > 4) {
+//         return true
+//     }
+// })
+// console.log(evens);
 
 // https://www.codewars.com/kata/54edbc7200b811e956000556
 
@@ -208,7 +209,72 @@ const above300 = places.filter(function (place) {
         return true
     }
 })
-console.log(above300);
+// console.log(above300);
+
+
+// kata filter out the geese
+// https://www.codewars.com/kata/57ee4a67108d3fd9eb0000e7
+function gooseFilter(birds) {
+    const geese = [
+        "African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    const filtered = birds.filter(function (bird) {
+        // if the bird is not in the geese array
+        // return true
+        // if (geese.indexOf(bird) === - 1) {
+        //   return true
+        // }
+        if (!geese.includes(bird)) {
+            return true
+        }
+        // return geese.indexOf(bird) === - 1
+    });
+
+    return filtered;
+}
+
+// gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"])
+
+// ["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
+
+// reverse - reverses an array
+
+const arr = [1, 2, 3, 4, 5];
+// console.log(arr.reverse());
+
+const word = 'helloworld';
+
+// console.log(word.split('o'));
+// use split() and join() to turn a string into
+// an array and back
+// 'hello'.split('').reverse().join('')
+
+// sort - sorts the array (in place) and returns a new array
+
+
+
+const numbers = [22, 23, 68, 1, 99, 0, 112, 64];
+
+function compare(a, b) {
+    // if (a < b) {
+    //     return 3;
+    // }
+    // if (a === b) {
+    //     return 0;
+    // }
+    // if (b < a) {
+    //     return - 3;
+    // }
+    return b - a;
+}
+
+const sorted = numbers.sort(function (a, b) {
+    // sorted ascending
+    return a - b
+    // sorted descending
+    // return b -a
+});
+console.log(sorted);
+
 
 
 
