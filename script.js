@@ -9,7 +9,7 @@ const beatles = ['John', 'Paul', 'Ringo', 'George'];
 // }
 // prefix every name with 'Mr'
 const p = beatles.map(function (name) {
-    'Mr ' + name;
+    return 'Mr ' + name;
 });
 
 // const numbers = [1, 2, 3, 4, 5];
